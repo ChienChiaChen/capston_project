@@ -1,0 +1,20 @@
+<!-- <form action="/" method="get">
+	<input type="text" name="name">
+	<input type="submit">
+
+</form> -->
+<!--<%=form_tag(root_path, method: "get")  do%>
+<input type="text" name ="name">
+<input type="submit">
+<% end %> -->
+<%=form_tag(root_path, method: "get")  do%>
+
+<ul>
+	<li><%=text_field_tag :name %></li>
+	<li><%=password_field_tag :pwd %></li>
+	<li><%=time_field_tag :time %></li>
+	<li><%=button_tag :btn %></li>
+	<li><%=text_area_tag :text2%></li>
+</ul>
+<input type="submit">
+<% end %>

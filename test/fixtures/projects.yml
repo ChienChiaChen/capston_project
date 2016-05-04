@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  manager_name: MyString
+  identify_date: 2016-05-04
+  scope: 1
+  time: 1
+  cost: 1
+  member: 1
+
+two:
+  project_name: MyString
+  manager_name: MyString
+  identify_date: 2016-05-04
+  scope: 1
+  time: 1
+  cost: 1
+  member: 1

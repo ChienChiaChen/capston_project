@@ -1,0 +1,38 @@
+<!-- <h1>Projects#new</h1>
+<p>Find me in app/views/projects/new.html.erb</p>
+ -->
+
+
+
+  <h1>Create	Project</h1>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@project) do |f| %>
+        <%= f.label :project_name, "專案名稱" %>
+        <%= f.text_field :project_name %>
+
+        <%= f.label :manager_name, "專案管理人" %>
+        <%= f.text_field :manager_name %>
+
+        <%= f.label :identify_date, "辨識日期" %>
+        <%= f.date_field :identify_date %>
+
+        <%= f.label :scope, "專案規模" %>
+        <%= f.number_field :scope %>
+
+        <%= f.label :time, "專案時程" %>
+        <%= f.number_field :time %>
+
+        <%= f.label :cost, "專案預算" %>
+        <%= f.number_field :cost %>
+
+        <%= f.label :member, "專案成員人數" %>
+        <%= f.number_field :member %>
+
+
+
+        <%= f.submit "Create Project", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>

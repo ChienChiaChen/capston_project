@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
+  # get 'projects/show'
+
+  # get 'projects/edit'
+
+  # get 'projects/index'
+
+  # get 'projects/new'
+  resources :projects
   # get 'users/new'
-  resources :users
+  # resources :users
   get 'signup'  => 'users#new'
   
   # get 'home' , to: "pages#home"

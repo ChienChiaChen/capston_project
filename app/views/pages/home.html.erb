@@ -1,6 +1,7 @@
 <!-- <h1> hello</h1> -->
 
 <head>
+  
 
     <style type="text/css">-->
         html, body {
@@ -164,16 +165,16 @@
             };
             var options = {
 
-            	edges:{
-            	    arrows: 'to',
-            	    color: 'red',
-            	    font: '12px arial #ff0000',
-            	    scaling:{
-            	      label: true,
-            	    },
-            	    shadow: true,
-            	    smooth: true,
-            	  }
+                edges:{
+                    arrows: 'to',
+                    color: gon.variable_name,
+                    font: '12px arial gon.variable_name',
+                    scaling:{
+                      label: true,
+                    },
+                    shadow: true,
+                    smooth: true,
+                  }
             };
             network = new vis.Network(container, data, options);
 

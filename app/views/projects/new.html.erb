@@ -18,15 +18,31 @@
         <%= f.label :identify_date, "辨識日期" %>
         <%= f.date_field :identify_date %>
 
-        <%= f.label :scope, "專案規模" %>
+        <%= f.label :scope, "專案規模(功能點)" %>
         <%= f.number_field :scope %>
 
-        <%= f.label :time, "專案時程" %>
+        <%= f.label :time, "專案時程(月)" %>
         <%= f.number_field :time %>
 
-        <%= f.label :cost, "專案預算" %>
+        <%= f.label :cost, "專案預算(萬元)" %>
         <%= f.number_field :cost %>
 
+        <%= f.label :outsource, "是否委外" %>
+        <br>
+
+        <div class="radio-inline">
+        <%= f.radio_button :outsource, true  %>
+        <%= f.label  :outsource,"是" %>
+        </div>
+        <br>
+        <div class="radio-inline">
+        <%= f.radio_button :outsource, false, :checked => true %> 
+        <%= f.label :outsource, "否" %>
+        </div>
+        <br>
+        <br>
+
+        
         <%= f.label :member, "專案成員人數" %>
         <%= f.number_field :member %>
 

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :projects
   # get 'users/new'
   # resources :users
-  get 'signup'  => 'users#new'
+  # get 'signup'  => 'users#new'
   
   # get 'home' , to: "pages#home"
   get 'home', controller: 'pages'

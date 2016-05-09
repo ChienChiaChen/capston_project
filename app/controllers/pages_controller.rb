@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-	# def home
-	# 	render 'home'
-	# end
+	def home
+		gon.variable_name = '#62C9E7'
+	end
 	# def about
 	# 	render 'about'
 	# end

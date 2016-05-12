@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'visjs-rails'
 gem 'gon'
+gem 'awesome_rails_console'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

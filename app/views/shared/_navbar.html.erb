@@ -13,10 +13,11 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><%=link_to 'About', root_path%></li>
-            <li ><%=link_to 'Cretae', new_project_path%></li>
+            <li ><%=link_to 'Create Project ', new_project_path%></li>
 
-            <li class="active"><a href="/new">New Project</a></li>
-            <li class="active"><a href="/history">History</a></li>
+<!--             <li class="active"><a href="/new">New Project</a></li>-->
+ 
+            <li><%=link_to 'All Projects ', projects_path %></li>
             <li class="active"><%=link_to 'Form test', form_path%></li>
 
           </ul>

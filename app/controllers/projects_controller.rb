@@ -4,10 +4,22 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project=Project.find(params[:id])
   end
 
   def index
   	@projects=Project.all
+  end
+
+  def update
+    @project = Project.find params[:id]
+
+      if @project.update_attributes params.require(:project)
+          .permit(:project_name)
+        flash[:notice] = "yes!"
+        redirect_to  edit_project_path(@project) 
+        # 
+      end
   end
 
   def new
@@ -25,7 +37,7 @@ class ProjectsController < ApplicationController
   			:member)
 
   	if @project.save
-  		redirect_to @project
+  		redirect_to @project ,:notice => "success~"
   	else
   	      render 'new'
   	end

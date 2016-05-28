@@ -1,10 +1,11 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<h1><%=@project.project_name%></h1>
 
-<h1> <%=@project.project_name%></h1>
-<h1> <%=@project.manager_name%></h1>
-<h1> <%=@project.identify_date%></h1>
-<h1> <%=@project.scope%></h1>
-<h1> <%=@project.cost%></h1>
-<h1> <%=@project.time%></h1>
-<h1> <%=@project.member%></h1>
+<table class="view">
+	
+<tr>
+	<td>
+		<%= render 'shared/form' %>
+	</td>
+	
+</tr>
+</table>

@@ -4,7 +4,8 @@ gem 'bootstrap-sass'
 gem 'visjs-rails'
 gem 'gon'
 gem 'awesome_rails_console'
-
+gem 'jquery-turbolinks'
+gem 'jquery-datatables-rails', '~> 2.1.10.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

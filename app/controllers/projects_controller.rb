@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
   			:member)
 
   	if @project.save
-  		redirect_to @project ,:notice => "success~"
+  		redirect_to @project ,:notice => "更新成功"
   	else
   	      render 'new'
   	end

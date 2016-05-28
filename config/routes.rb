@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # get 'projects/index'
 
   # get 'projects/new'
-  resources :projects
+  resources :projects do
+    member do 
+      get :anp_form
+    end
+  end
   # get 'users/new'
   # resources :users
   # get 'signup'  => 'users#new'

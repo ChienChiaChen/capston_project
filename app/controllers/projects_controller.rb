@@ -7,6 +7,9 @@ class ProjectsController < ApplicationController
     @project=Project.find(params[:id])
   end
 
+  def anp_form
+
+  end
   def index
   	@projects=Project.all
   end
@@ -15,8 +18,15 @@ class ProjectsController < ApplicationController
     @project = Project.find params[:id]
 
       if @project.update_attributes params.require(:project)
-          .permit(:project_name)
-        flash[:notice] = "yes!"
+          .permit(:project_name, 
+        :manager_name,
+        :identify_date,
+        :scope,
+        :cost,
+        :outsource,
+        :time,
+        :member)
+        flash[:notice] = "更新成功!"
         redirect_to  edit_project_path(@project) 
         # 
       end
@@ -33,11 +43,12 @@ class ProjectsController < ApplicationController
   			:identify_date,
   			:scope,
   			:cost,
+        :outsource,
   			:time,
   			:member)
 
   	if @project.save
-  		redirect_to @project ,:notice => "更新成功"
+  		redirect_to @project ,:notice => "建立成功"
   	else
   	      render 'new'
   	end

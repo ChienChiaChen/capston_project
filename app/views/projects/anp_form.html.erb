@@ -1,1 +1,105 @@
-<h1>ANP is suck!!</h1>
+<h1>類別兩兩比較</h1>
+
+<h3>產品工程</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>類別</th>
+  
+    <%9.downto(1) {|i|%> 
+		<th><%=i%></th>
+  	<% }%>
+
+  <th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>產品工程</td>
+	  <%9.times do %>
+			<td><%= check_box_tag(:tt) %></td>
+	  <%end%>
+  	  <td>開發環境</td>
+</tr>
+<tr>
+  <td>產品工程</td>
+		<%9.times do %>
+				<td><%= check_box_tag(:tt) %></td>
+		<%end%>
+    	<td>計畫限制</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr>
+
+<h3>開發環境</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>類別</th>
+  
+    <%9.downto(1) {|i|%> 
+		<th><%=i%></th>
+  	<% }%>
+
+  <th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>開發環境</td>
+	  <%9.times do %>
+			<td><%= check_box_tag(:tt) %></td>
+	  <%end%>
+  	  <td>產品工程</td>
+</tr>
+<tr>
+  <td>開發環境</td>
+		<%9.times do %>
+				<td><%= check_box_tag(:tt) %></td>
+		<%end%>
+    	<td>計畫限制</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr >
+
+<h3>計畫限制</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>類別</th>
+  
+    <%9.downto(1) {|i|%> 
+		<th><%=i%></th>
+  	<% }%>
+
+  <th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>計畫限制</td>
+	  <%9.times do %>
+			<td><%= check_box_tag(:tt) %></td>
+	  <%end%>
+  	  <td>產品工程</td>
+</tr>
+<tr>
+  <td>計畫限制</td>
+		<%9.times do %>
+				<td><%= check_box_tag(:tt) %></td>
+		<%end%>
+    	<td>開發環境</td>
+</tr>
+</tbody>
+</table>
+</div>
+

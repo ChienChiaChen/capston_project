@@ -1,150 +1,17 @@
-<head>
-<script type="text/javascript" src="../../dist/vis.js"></script>
-    <link href="../../dist/vis.css" rel="stylesheet" type="text/css" />
 
-    <style type="text/css">
-        #mynetwork {
-            width: 600px;
-            height: 400px;
-            border: 1px solid lightgray;
-        }
-    </style>
-
-    <script type="text/javascript">
-    var edges;
-    function updateProbability(){
-        try {
-            edges.update( 
-                {id: '1',label: (Math.floor(Math.random() * 100) + 1 )+"%"}
-                
-            );
-            edges.update( 
-                {id: '2',label: (Math.floor(Math.random() * 100) + 1 )+"%"}
-                
-            );
-            edges.update( 
-                {id: '3',label: (Math.floor(Math.random() * 100) + 1 )+"%"}
-            );
-            edges.update( 
-                
-                {id: '4',label: (Math.floor(Math.random() * 100) + 1 )+"%"}
-            );
-        }
-        catch (err) {
-            alert(err);
-        }
-    }
-    // create an array with nodes
-    function draw(){
-        var nodes = new vis.DataSet([
-            {id: 1, label: '成本'},
-            {id: 2, label: '時程'},
-            {id: 3, label: '成員人數'},
-            {id: 4, label: '預算'},
-            {id: 5, label: '溝通'}
-        ]);
-
-        // create an array with edges
-        var d= (Math.floor(Math.random() * 100) + 1 )+"%"
-        var dd=  (Math.floor(Math.random() * 100) + 1 )+"%"
-        var ddd= (Math.floor(Math.random() * 100) + 1 )+"%"
-        var dddd= (Math.floor(Math.random() * 100) + 1 )+"%"
-        var tt=[
-            {id: '1', from: 1, to: 3,label: d},
-            {id: '2', from: 1, to: 2,label: dd},
-            {id: '3', from: 2, to: 4,label: ddd},
-            {id: '4', from: 2, to: 5,label: dddd}
-        ];
-         edges = new vis.DataSet(tt);
-
-        // create a network
-        var container = document.getElementById('mynetwork');
-
-        // provide the data in the vis format
-        var data = {
-            nodes: nodes,
-            edges: edges
-        };
-        var options = {
-           physics:{
-               
-               stabilization: {
-                enabled: true,
-                onlyDynamicEdges: false
-               }
-             },
-            edges:{
-                arrows: 'to',
-                color: #62C9E7,
-                font: '12px arial #62C9E7',
-                scaling:{
-                  label: true,
-                },
-                shadow: true,
-                smooth: false
-              }
-        };
-
-        // initialize your network!
-        var network = new vis.Network(container, data, options);
-        }
-    </script>
-</head>
-<body >
-<table class="view">
+<!-- <body onload="draw();">
+ --><table class="view">
 	
 <tr>
 	<td>
-        <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <%= form_for(@project) do |f| %>
-            <%= f.label :project_name, "專案名稱" %>
-            <%= f.text_field :project_name %>
-
-            <%= f.label :manager_name, "專案管理人" %>
-            <%= f.text_field :manager_name %>
-
-            <%= f.label :identify_date, "辨識日期" %>
-            <%= f.date_field :identify_date %>
-
-            <%= f.label :scope, "專案規模(功能點)" %>
-            <%= f.number_field :scope %>
-
-            <%= f.label :time, "專案時程(月)" %>
-            <%= f.number_field :time %>
-
-            <%= f.label :cost, "專案預算(萬元)" %>
-            <%= f.number_field :cost %>
-
-            <%= f.label :outsource, "是否委外" %>
-            <br>
-
-            <div class="radio-inline">
-            <%= f.radio_button :outsource, true  %>
-            <%= f.label  "是" %>
-            </div>
-            <div class="radio-inline">
-            <%= f.radio_button :outsource, false %> 
-            <%= f.label "否" %>
-            </div>
-            <br>
-            <br>
-
-            
-            <%= f.label :member, "專案成員人數" %>
-            <%= f.number_field :member %>
-
-
-            <%= f.submit @project.id ? 'update' : 'Create Project', class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      </div>
+        <%= render 'shared/form'%>
 	</td>
 	<td>
-        <div id="mynetwork",onload="draw();"></div>
+        <div id="mynetwork"></div>
+        
     </td>
 		
 
 </tr>
 </table>
-</body >
+<!-- </body > -->

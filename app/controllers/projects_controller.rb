@@ -48,9 +48,10 @@ class ProjectsController < ApplicationController
   			:member)
 
   	if @project.save
-  		redirect_to @project ,:notice => "建立成功"
+  		redirect_to edit_project_path(@project) ,:notice => "建立成功"
   	else
-  	      render 'new'
+  	   flash[:error] = "Outsource can't be blank..."
+      render 'new'
   	end
   end
 end

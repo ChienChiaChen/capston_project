@@ -1,0 +1,246 @@
+<!-- <h1>類別兩兩比較</h1> -->
+
+<h3>1. 產品工程風險群組</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>風險因子</th>
+  
+    <%9.downto(2) {|i|%> 
+    <th bgcolor="#5D7B9D"><font color="#fff"><%=i%></font></th>
+    <% }%>
+  
+    <th bgcolor="#384F0F"><font color="#fff">1</font></th>
+
+    <%8.times {|t|%>
+    <th bgcolor="#BD2240"><font color="#fff"><%=(t+2)%></font></th>
+    <% }%>
+
+  <th>風險因子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1-1 需求</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_1,i) %></td>
+    <%}%>
+
+      <td>設計</td>
+</tr>
+<tr>
+  <td>1-2 需求</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_2,i) %></td>
+    <%}%>
+      <td>編碼與單元測試</td>
+</tr>
+<tr>
+  <td>1-3需求</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_3,i) %></td>
+    <%}%>
+      <td>整合與測試</td>
+</tr>
+<tr>
+  <td>1-4 需求</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_4,i) %></td>
+    <%}%>
+      <td>專案的特殊需求</td>
+</tr>
+<tr>
+  <td>1-5 設計</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_5,i) %></td>
+    <%}%>
+      <td>編碼與單元測試</td>
+</tr>
+<tr>
+  <td>1-6 設計</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_6,i) %></td>
+    <%}%>
+      <td>整合與測試</td>
+</tr>
+<tr>
+  <td>1-7 設計</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_7,i) %></td>
+    <%}%>
+      <td>專案的特殊需求</td>
+</tr>
+<tr>
+  <td>1-8 編碼與單元測試</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_8,i) %></td>
+    <%}%>
+      <td>整合與測試</td>
+</tr>
+<tr>
+  <td>1-9 編碼與單元測試</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_9,i) %></td>
+    <%}%>
+      <td>專案的特殊需求</td>
+</tr>
+<tr>
+  <td>1-10 整合與測試</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_10,i) %></td>
+    <%}%>
+      <td>專案的特殊需求</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr>
+
+<h3>2. 以開發環境為評準</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th >類別</th>
+  
+    <%9.downto(2) {|i|%> 
+    <th bgcolor="#5D7B9D"><font color="#fff"><%=i%></font></th>
+    <% }%>
+  
+    <th bgcolor="#384F0F"><font color="#fff">1</font></th>
+
+    <%8.times {|t|%>
+    <th bgcolor="#BD2240"><font color="#fff"><%=(t+2)%></font></th>
+    <% }%>
+
+  <th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2-1 開發流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_11,i) %></td>
+    <%}%>
+
+      <td>開發系統</td>
+</tr>
+<tr>
+  <td>2-2 開發流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_12,i) %></td>
+    <%}%>
+      <td>管理流程</td>
+</tr>
+<tr>
+  <td>2-3 開發流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_13,i) %></td>
+    <%}%>
+      <td>管理方法</td>
+</tr>
+<tr>
+  <td>2-4 開發流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_14,i) %></td>
+    <%}%>
+      <td>工作環境</td>
+</tr>
+<tr>
+  <td>2-5 開發系統</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_15,i) %></td>
+    <%}%>
+      <td>管理流程</td>
+</tr>
+<tr>
+  <td>2-6 開發系統</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_16,i) %></td>
+    <%}%>
+      <td>管理方法</td>
+</tr>
+<tr>
+  <td>2-7 開發系統</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_17,i) %></td>
+    <%}%>
+      <td>工作環境</td>
+</tr>
+<tr>
+  <td>2-8 管理流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f11_18,i) %></td>
+    <%}%>
+      <td>管理方法</td>
+</tr>
+<tr>
+  <td>2-9 管理流程</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f11_19,i) %></td>
+    <%}%>
+      <td>工作環境</td>
+</tr>
+<tr>
+  <td>2-10 管理方法</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_20,i) %></td>
+    <%}%>
+      <td>工作環境</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<hr >
+
+<h3>3. 以計畫限制為評準</h3>
+<div class="w3-padding w3-white notranslate">
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th >類別</th>
+  
+    <%9.downto(2) {|i|%> 
+    <th bgcolor="#5D7B9D"><font color="#fff"><%=i%></font></th>
+    <% }%>
+  
+    <th bgcolor="#384F0F"><font color="#fff">1</font></th>
+
+    <%8.times {|t|%>
+    <th bgcolor="#BD2240"><font color="#fff"><%=(t+2)%></font></th>
+    <% }%>
+
+  <th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>3-1 資源</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_21,i) %></td>
+    <%}%>
+
+      <td>合約</td>
+</tr>
+<tr>
+  <td>3-2 資源</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_22,i) %></td>
+    <%}%>
+      <td>計畫介面</td>
+</tr>
+<tr>
+  <td>3-3 合約</td>
+    <%17.times {|i|%>
+      <td><%= radio_button_tag(:f13_23,i) %></td>
+    <%}%>
+      <td>計畫介面</td>
+</tr>
+</tbody>
+</table>
+</div>
+

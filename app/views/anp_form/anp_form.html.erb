@@ -1,0 +1,35 @@
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#compare-1">風險類別間兩兩比較</a></li>
+  <li><a data-toggle="tab" href="#menu1">產品工程</a></li>
+  <li><a data-toggle="tab" href="#menu2">開發環境</a></li>
+  <li><a data-toggle="tab" href="#menu3">計畫限制</a></li>
+  
+</ul>
+
+<div class="tab-content">
+  <div id="compare-1" class="tab-pane fade in active">
+    <!-- <h3>HOME</h3>
+    <p>Some content.</p> -->
+    <p><%= render 'shared/anp_class'%></p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+   <!--  <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p> -->
+    <p><%= render 'shared/anp_ProductEngineering'%></p>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+    <!-- <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p> -->
+    <p><%= render 'shared/anp_DevelopmentEnvironment'%></p>
+  </div>
+  <div id="menu3" class="tab-pane fade">
+    <!-- <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p> -->
+    <p><%= render 'shared/anp_ProgramConstrint'%></p>
+
+  </div> 
+</div>
+
+<%= button_tag :class => "btn btn-primary btn-block" do %>
+ <%= t('.提交')%>
+<% end %>

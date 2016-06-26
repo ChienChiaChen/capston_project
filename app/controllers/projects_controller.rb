@@ -23,7 +23,17 @@ class ProjectsController < ApplicationController
         :cost,
         :outsource,
         :time,
-        :member)
+        :member,
+        :experience,
+        :product_type,
+        :req_stability, 
+        :req_clear,
+        :project_type,
+        :development_process,
+        :collaboratingdevelopment,
+        :user_involvement,
+        :supplier_support,
+        :manager_support)
         flash[:notice] = "更新成功!"
         redirect_to  edit_project_path(@project) 
         # 
@@ -43,7 +53,20 @@ class ProjectsController < ApplicationController
   			:cost,
         :outsource,
   			:time,
-  			:member)
+  			:member,
+        :experience,
+        :product_type,
+        :req_stability, 
+        :req_clear ,
+        :project_type ,
+        :development_process ,
+        :collaboratingdevelopment ,
+        :user_involvement ,
+        :supplier_support ,
+        :manager_support
+
+
+        )
 
   	if @project.save
   		redirect_to edit_project_path(@project) ,:notice => "建立成功"

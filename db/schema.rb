@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160529171459) do
+ActiveRecord::Schema.define(version: 20160621030045) do
 
   create_table "anp_supers", force: :cascade do |t|
     t.string   "tt"
@@ -35,9 +35,19 @@ ActiveRecord::Schema.define(version: 20160529171459) do
     t.integer  "time"
     t.integer  "cost"
     t.integer  "member"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.boolean  "outsource"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "outsource"
+    t.integer  "experience"
+    t.integer  "product_type"
+    t.integer  "req_stability"
+    t.integer  "req_clear"
+    t.integer  "project_type"
+    t.integer  "development_process"
+    t.integer  "collaboratingdevelopment"
+    t.integer  "user_involvement"
+    t.integer  "supplier_support"
+    t.integer  "manager_support"
   end
 
 end

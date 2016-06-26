@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # end
   resources :projects
   get 'anp_form' => 'anp_form#index'
+  get 'anp_form/consistency' => 'anp_form#consistency'
   # get 'users/new'
   # resources :users
   # get 'signup'  => 'users#new'

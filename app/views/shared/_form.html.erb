@@ -11,33 +11,100 @@
         <%= f.label :identify_date, "辨識日期" %>
         <%= f.date_field :identify_date %>
 
+<!-- 產品因子 -->
         <%= f.label :scope, "專案規模(功能點)" %>
         <%= f.number_field :scope %>
 
+        <%= f.label "產品類型" %>
+        <%= f.select :product_type, 
+            options_for_select(
+                    [['', 0],['企業資源規劃系統, ERP', 1],['供應鏈管理系統, SCM', 2],['交易處理系統, TPS', 3]],
+                    @project.product_type
+            ) %>
+        
+        <%= f.label "需求明確性" %>
+        <%= f.select :req_clear, 
+            options_for_select(
+                    [['', 0],['高', 1],['低', 2]],
+                    @project.req_clear
+            ) %>
+
+        <%= f.label "需求變動性" %>
+        <%= f.select :req_stability, 
+            options_for_select(
+                    [['', 0],['高', 1],['低', 2]],
+                    @project.req_stability
+            ) %>
+  
+<!-- 專案因子  -->
         <%= f.label :time, "專案時程(月)" %>
         <%= f.number_field :time %>
 
         <%= f.label :cost, "專案預算(萬元)" %>
         <%= f.number_field :cost %>
 
-        <%= f.label :outsource, "是否委外" %>
-        <br>
+        <%= f.label "專案類型" %>
+        <%= f.select :project_type, 
+            options_for_select(
+                    [['', 0],['開發型專案', 1],['維護性專案', 2]],
+                    @project.project_type
+            ) %>
 
-        <div class="radio-inline">
-        <%= f.radio_button :outsource, true  %>
-        <%= f.label  "是" %>
-        </div>
-        <div class="radio-inline">
-        <%= f.radio_button :outsource, false %> 
-        <%= f.label  "否" %>
-        </div>
-        <br>
-        <br>
 
+<!-- 流程因子 -->
+        <%= f.label "是否委外" %>
+        <%= f.select :outsource, 
+            options_for_select(
+                    [['', 0],['無委外', 1],['國內委外', 2],['國外委外', 3]],
+                    @project.outsource
+            ) %>
+
+        <%= f.label "開發流程" %>
+        <%= f.select :development_process, 
+            options_for_select(
+                    [['', 0],['瀑布型', 1],['敏捷開發', 2]],
+                    @project.development_process
+            ) %>
+        
+
+        <%= f.label "協同開發" %>
+        <%= f.select :collaboratingdevelopment, 
+            options_for_select(
+                    [['', 0],['是', 1],['否', 2]],
+                    @project.collaboratingdevelopment
+            ) %>
+
+
+<!-- 成員因子 -->
         
         <%= f.label :member, "專案成員人數" %>
         <%= f.number_field :member %>
 
+        <%= f.label "供應商支援" %>
+        <%= f.select :supplier_support, 
+            options_for_select(
+                    [['', 0],['是', 1],['否', 2]],
+                    @project.supplier_support
+            ) %>
+        <%= f.label "高階主管支持" %>
+        <%= f.select :manager_support, 
+            options_for_select(
+                    [['', 0],['是', 1],['否', 2]],
+                    @project.manager_support
+            ) %>
+        <%= f.label "使用者的參與" %>
+        <%= f.select :user_involvement, 
+            options_for_select(
+                    [['', 0],['是', 1],['否', 2]],
+                    @project.user_involvement
+            ) %>
+
+        <%= f.label :experience, "成員經驗" %>
+        <%= f.select :experience, 
+            options_for_select(
+                    [['', 0],['高', 1],['中', 2],['低', 3]],
+                    @project.experience
+            ) %>
 
         <%= f.submit @project.id ? 'update' : 'Create Project', class: "btn btn-primary" %>
       <% end %>

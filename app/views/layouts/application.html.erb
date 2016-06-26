@@ -117,11 +117,20 @@
     networkk=function(){
       var edges;
       var nodes = new vis.DataSet([
-            {id: 1, label: '成本'},
-            {id: 2, label: '時程'},
-            {id: 3, label: '成員人數'},
-            {id: 4, label: '預算'},
-            {id: 5, label: '溝通'}
+            {id: 11, label: '需求'},
+            {id: 12, label: '設計'},
+            {id: 13, label: '編碼與單元測試'},
+            {id: 14, label: '整合與測試'},
+            {id: 15, label: '專案的特殊要求'},
+            {id: 21, label: '開發流程'},
+            {id: 22, label: '開發系統'},
+            {id: 23, label: '管理流程'},
+            {id: 24, label: '管理方法'},
+            {id: 25, label: '工作環境'},
+            {id: 31, label: '資源'},
+            {id: 32, label: '合約'},
+            {id: 33, label: '計畫介面'}
+            
         ]);
 
         // create an array with edges
@@ -130,10 +139,30 @@
         var ddd= (Math.floor(Math.random() * 100) + 1 )+"%"
         var dddd= (Math.floor(Math.random() * 100) + 1 )+"%"
         var tt=[
-            {id: '1', from: 1, to: 3,label: d},
-            {id: '2', from: 1, to: 2,label: dd},
-            {id: '3', from: 2, to: 4,label: ddd},
-            {id: '4', from: 2, to: 5,label: dddd}
+            {id: '1', from: 12, to: 23,label: d},
+            {id: '2', from: 32, to: 22,label: dd},
+            {id: '3', from: 15, to: 12,label: ddd},
+            {id: '4', from: 23, to: 31,label: dddd},
+            {id: '5', from: 22, to: 12,label: dddd},
+            {id: '6', from: 23, to: 31,label: dddd},
+            {id: '7', from: 11, to: 12,label: d},
+            {id: '8', from: 11, to: 11,label: dd},
+            {id: '9', from: 13, to: 31,label: ddd},
+            
+            {id: '13', from: 32, to: 12,label: dddd},
+            {id: '14', from: 31, to: 13,label: ddd},
+            {id: '15', from: 25, to: 14,label: dddd},
+            {id: '16', from: 24, to: 15,label: dd},
+            {id: '17', from: 23, to: 21,label: dddd},
+            // {id: '18', from: 22, to: 21,label: d},
+            // {id: '19', from: 21, to: 22,label: ddd},
+            // {id: '20', from: 15, to: 33,label: dddd},
+            // {id: '21', from: 14, to: 12,label: ddd},
+            // {id: '22', from: 21, to: 14,label: d}
+
+
+
+
         ];
          edges = new vis.DataSet(tt);
 

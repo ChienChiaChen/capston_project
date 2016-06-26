@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621030045) do
+ActiveRecord::Schema.define(version: 20160626155319) do
 
   create_table "anp_supers", force: :cascade do |t|
     t.string   "tt"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(version: 20160621030045) do
     t.integer  "user_involvement"
     t.integer  "supplier_support"
     t.integer  "manager_support"
+  end
+
+  create_table "risk_dimensions", force: :cascade do |t|
+    t.string   "dimension"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "risks", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

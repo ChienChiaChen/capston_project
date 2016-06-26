@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :projects
   get 'anp_form' => 'anp_form#index'
   get 'anp_form/consistency' => 'anp_form#consistency'
+
+  get 'riskfeedback' => 'risk_feedback#index'
   # get 'users/new'
   # resources :users
   # get 'signup'  => 'users#new'

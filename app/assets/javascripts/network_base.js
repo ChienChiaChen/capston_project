@@ -1,1 +1,0 @@
-window.Vis_Network ={};

@@ -1,0 +1,2 @@
+module RiskFeedbackHelper
+end

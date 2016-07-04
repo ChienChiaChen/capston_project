@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160626155319) do
+ActiveRecord::Schema.define(version: 20160704034303) do
+
+  create_table "addrisks", force: :cascade do |t|
+    t.string   "riskclass"
+    t.string   "riskfactor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "anp_supers", force: :cascade do |t|
     t.string   "tt"
@@ -54,6 +61,13 @@ ActiveRecord::Schema.define(version: 20160626155319) do
     t.string   "dimension"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "risk_relations", force: :cascade do |t|
+    t.integer  "Risk_form_id"
+    t.integer  "Risk_to_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "risks", force: :cascade do |t|

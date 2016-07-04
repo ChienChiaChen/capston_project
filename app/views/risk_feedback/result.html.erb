@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<div class="col-md-6 col-md-offset-3">
+<h2><%=params[:riskclass]%></h2>
+
+
+<%params[:riskfactor].split(',').each do |p|%>
+	<h3><%=p%></h3>
+<%end%>
+
+</div>

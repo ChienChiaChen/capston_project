@@ -1,0 +1,17 @@
+<h1>Add Risks</h1>
+<div class="col-md-6 col-md-offset-3">
+<%=form_tag(riskfeedback_result_path, method: "post")  do%>
+<ul>
+	<label >風險類別</label>
+	
+	<%= select_tag(:riskclass, options_for_select([ ['產品工程', '產品工程'], ['開發流程', '開發流程'], ['計畫限制', '計畫限制']])) %>
+	
+
+ 	<label >風險因子(風險之間請用”逗號“區隔)</label>
+ 	<%= text_area_tag :riskfactor%>
+ 	<%=submit_tag "新增" ,class: "btn btn-primary" ,'data-disable-with' => "Please wait.." %>
+
+</ul>
+<% end %>
+</div>
+

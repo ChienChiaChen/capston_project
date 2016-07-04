@@ -12,10 +12,13 @@ Rails.application.routes.draw do
   #   end
   # end
   resources :projects
+  get 'anp_project_form' =>'anp_form#project_form'
   get 'anp_form' => 'anp_form#index'
+  post 'anp_form' => 'anp_form#check'
   get 'anp_form/consistency' => 'anp_form#consistency'
 
   get 'riskfeedback' => 'risk_feedback#index'
+  post 'riskfeedback_result' => 'risk_feedback#result'
   # get 'users/new'
   # resources :users
   # get 'signup'  => 'users#new'
@@ -27,7 +30,7 @@ Rails.application.routes.draw do
   # get 'about', to: "pages#about"
   # get 'history', to: "pages#history"
   # get 'new', to: "pages#new"
-  root "pages#home"
+  root "projects#index"
 
   # get '/' , to: "pages#home"
 end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  riskclass: MyString
+  riskfactor: MyString
+
+two:
+  riskclass: MyString
+  riskfactor: MyString

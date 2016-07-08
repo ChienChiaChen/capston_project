@@ -9,6 +9,20 @@ class ProjectsController < ApplicationController
      a[i]=rand(56..78).to_s+"%"
     end
     @project=Project.find(params[:id])
+
+    if @project.cost<200||@project.time<3
+     a[35]="95%"
+     a[36]="87%"
+     a[37]="83%"
+     a[38]="94%"
+     a[39]="88%"
+     a[40]="81%"
+     a[41]="88%"   
+    end
+
+
+
+
     @your_hash1=[
             {id: 11, label: '需求'},
             {id: 12, label: '設計'},
@@ -77,6 +91,7 @@ class ProjectsController < ApplicationController
            {id: '44', from: 32, to: 21,label: a[44]},
            {id: '45', from: 32, to: 31,label: a[45]},
            {id: '46', from: 32, to: 33,label: a[46]},
+           {id: '47', from: 23, to: 13,label: a[29]},
 
            # {id: '47', from: 31, to: 24,label: a[47]},
            # {id: '48', from: 31, to: 22,label: a[48]},

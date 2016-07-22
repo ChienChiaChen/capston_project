@@ -49,7 +49,7 @@ class AnpFormController < ApplicationController
 	
 	def consistency
 		a=rand(1..5)
-		if 3%2==2
+		if 3%2==1
 			redirect_to projects_path ,:notice => "回饋成功"
 		else
 			flash[:error] = "不符合一致性測試"
